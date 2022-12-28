@@ -10,6 +10,10 @@
 
 ## Laboratorios con sistema de colas
 
+* Hay ciertos casos en los que varios usuarios+as han de ejecutar sus programas de forma que los ordenadores que usen (llamados nodos) se asignen en exclusividad para esa persona (en un mismo nodo no se ejecuten los trabajos de dos o más usuarios+as a la vez).
+* Uno de estos casos es la medición de rendimiento de manera que cuando se ejecuta un programa de medición no se quiere tener interferencias de la ejecución de otro programa de medición a la vez.
+* Para estos casos se usa un sistema de trabajos en cola, que se encarga de asignar nodos durante un tiempo limitado a las personas que lo usen para que puedan trabajar en exclusividad si lo precisan.
+
 ### 1. Pre-requisitos
 
 Ha de disponer de:
