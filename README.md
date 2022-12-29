@@ -1,10 +1,61 @@
-## Materiales para Arquitectura de Computadores
+## Materiales adicionales para Arquitectura de Computadores
 
 <html>
 <ul>
 <li> License <a href="http:/creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> </li>
 <li> Curso 2022-2023</li>
 </ul>
+</html>
+
+
+## Transparencias y esquemas
+
+<html>
+  <small>
+  <table>
+   <thead>
+     <tr><th>Sesión</th><th>Tema</th><th>Esquemas</th></tr>
+   </thead>
+   <tbody>
+   <tr>
+    <td>12</td><td>Modelos de consistencia</td>
+    <td><ul type="1">
+     <li> <a href="https://acaldero.github.io/uc3m_ac/esquemas/gii-ac-modelos_consistencia-v3.pdf">gii-ac-modelos_consistencia-v3.pdf</a></li>
+    </ul></td>
+   </tr> 
+   <tr>
+    <td>10</td><td>At&oacute;micos y consistencia de memoria con C++</td>
+    <td><ul type="1">
+     <li> <a href="https://acaldero.github.io/uc3m_ac/esquemas/gii-ac-consistencia_en_cpp-v3.pdf">gii-ac-consistencia_en_cpp-v3.pdf</a></li>
+    </ul></td>
+   </tr> 
+   <tr>
+    <td>10</td><td>Sincronizaci&oacute;n</td>
+    <td><ul type="1">
+     <li> <a href="https://acaldero.github.io/uc3m_ac/esquemas/gii-ac-modelos_sincronizacion-v3.pdf">gii-ac-modelos_sincronizacion-v3.pdf</a></li>
+    </ul></td>
+   </tr> 
+   <tr>
+    <td>10</td><td>Fiabilidad</td>
+    <td><ul type="1">
+     <li> <a href="https://acaldero.github.io/uc3m_ac/esquemas/gii-ac-fiabilidad-v3.pdf">gii-ac-fiabilidad-v3.pdf</a></li>
+    </ul></td>
+   </tr> 
+   <tr>
+    <td>10</td><td>Fiabilidad (RAID)</td>
+    <td><ul type="1">
+     <li> <a href="https://acaldero.github.io/uc3m_ac/esquemas/gii-ac-fiabilidad-raid-v3.pdf">gii-ac-fiabilidad-raid-v3.pdf</a></li>
+    </ul></td>
+   </tr> 
+   <tr>
+    <td>10</td><td>Coherencia (directorio)</td>
+    <td><ul type="1">
+     <li> <a href="https://acaldero.github.io/uc3m_ac/esquemas/gii-ac-coherencia-directorio-v2.pdf">gii-ac-coherencia-directorio-v2.pdf</a></li>
+    </ul></td>
+   </tr> 
+   <tbody>
+  </table>
+  </small> 
 </html>
 
 
