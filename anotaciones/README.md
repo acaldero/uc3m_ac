@@ -11,7 +11,7 @@
 
 ## Viajando de C a C++
 
-### Significado de '\*' y '&' según el contexto
+### (A) Significado de '\*' y '&' según el contexto
 
 La siguiente tabla resume los 4 significados habituales con los que trabajar:
 <html>
@@ -33,30 +33,30 @@ La siguiente tabla resume los 4 significados habituales con los que trabajar:
 	<tbody>
 	<tr>
 		<td>
-                al definir una variable
+                Al definir una variable...
 		</td>
 		<td>
                 <u><b>puntero a...</b></u><p></p>
 		Ejemplo:<br>
 <pre>
  int b = 3 ;
- int *p_int = &b ;
+ int <b>*</b>p_int = &b ; // (*)
 </pre>
-p_int es puntero a entero, y guarda la dirección de 'b' <br>
+(*) p_int es puntero a entero, y se guarda la dirección de la variable 'b'
 		</td>
 		<td>
                 <u><b>referencia a... (solo C++)</b></u><p></p>
 		Ejemplo:<br>
 <pre>
- int a = 3 ;
- int &r_int = a ;
+ int b = 3 ;
+ int <b>&</b>r_int = b ; // (*)
 </pre>
-r_int=5 hace lo que a=5 al crear la referencia se le indica a quien se asocia
+(*) r_int es una referencia a la variable 'b', y r_int=5 hace lo que b=5.
 		</td>
 	</tr>
 	<tr>
 		<td>
-                uso de variable
+                Al usar una variable...
 		</td>
 		<td>
                 <u><b>accede a...</b></u><p></p>
@@ -85,7 +85,7 @@ r_int=5 hace lo que a=5 al crear la referencia se le indica a quien se asocia
 La referencia se utiliza en C++ para paso de parámetro por referencia, evitando el mecanismo usado en C: usar un puntero.
 
 
-### Paso de parámetros por referencia en C (con punteros) y en C++ (con referencias)
+### (B) Paso de parámetros por referencia en C (con punteros) y en C++ (con referencias)
 
 <html>
 <div class="table-responsive">
@@ -93,49 +93,106 @@ La referencia se utiliza en C++ para paso de parámetro por referencia, evitando
 	<thead>
 	<tr>
 		<td class="col-auto">
-C con punteros
+&nbsp;
 		</td>
 		<td class="col-auto">
-C++ con referencias
+C 
+		</td>
+		<td class="col-auto">
+C++
 		</td>
 	</tr>
 	</thead>
 	<tbody>
 	<tr>
+		<td class="col-auto">
+Paso de variable por referencia.
+		</td>
 		<td>
+C con punteros<br>
+Ejemplo:<p></p>
 <pre>
     int main ( void )
     {
         int i = 3;
         ...
         inc(&i) ;
-                   // i vale 4
+                   // (*)
     }
 
-    void inc ( int * j)
+    void inc ( int * j )
     {
         *j = *j + 1;
     }
 </pre>
+(*) Tras llamar a 'inc', la variable i vale 4
 		</td>
 		<td>
+C++ con referencias<br>
+Ejemplo:<p></p>
 <pre>
     int main ( void )
     {
         int i = 3;
         ...
         inc(i) ;
-                   // i vale 4
+                   // (*)
     }
 
-    void inc ( int & j)
+    void inc ( int & j )
     {
         j = j + 1;
     }
 </pre>
+(*) Tras llamar a 'inc', la variable i vale 4
 		</td>
 	</tr>
-	</tbody>
+	<tr>
+		<td class="col-auto">
+Paso de variable por valor
+		</td>
+		<td>
+En C todo se pasa por valor<br>
+Ejemplo:<p></p>
+<pre>
+    int main ( void )
+    {
+        int i = 3;
+        ...
+        inc(i) ;
+                   // (*)
+    }
+
+    void inc ( int j )
+    {
+        j = j + 1;
+    }
+</pre>
+(*) Tras llamar a 'inc', la variable i vale 3.
+    Al llamar a 'inc' se copia el valor en j y se incrementa la copia (no el original)
+		</td>
+		<td>
+C++ igual que en C<br>
+Ejemplo:<p></p>
+<pre>
+    int main ( void )
+    {
+        int i = 3;
+        ...
+        inc(i) ;
+                   // (*)
+    }
+
+    void inc ( int j )
+    {
+        j = j + 1;
+    }
+</pre>
+(*) Tras llamar a 'inc', la variable i vale 3.
+    Al llamar a 'inc' se copia el valor en j y se incrementa la copia (no el original)
+		</td>
+	</tr>
+   </tbody>
 </table>
 </div>
 </html>
