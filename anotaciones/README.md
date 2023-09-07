@@ -13,8 +13,8 @@
 
 ### Significado de '\*' y '&' según el contexto
 
-<html>
 La siguiente tabla resume los 4 significados habituales con los que trabajar:
+<html>
 <div class="table-responsive">
 <table class="table table-bordered table-hover">
 	<thead>
@@ -33,23 +33,25 @@ La siguiente tabla resume los 4 significados habituales con los que trabajar:
 	<tbody>
 	<tr>
 		<td>
-                definición de variable
+                al definir una variable
 		</td>
 		<td>
-                <span class="border border-secondary">puntero a...</span>
+                <u><b>puntero a...</b></u><p></p>
+		Ejemplo:<br>
 <pre>
  int b = 3 ;
- int *p_int = &b ; // p_int es puntero a entero, 
-                   // y guarda la dirección de 'b'
+ int *p_int = &b ;
 </pre>
+p_int es puntero a entero, y guarda la dirección de 'b' <br>
 		</td>
 		<td>
-                <span class="border border-secondary">referencia a... (solo C++)</span>
+                <u><b>referencia a... (solo C++)</b></u><p></p>
+		Ejemplo:<br>
 <pre>
  int a = 3 ;
- int &r_int = a ; // r_int=5 hace lo que a=5
-                  // al crear la referencia se le indica a quien se asocia
+ int &r_int = a ;
 </pre>
+r_int=5 hace lo que a=5 al crear la referencia se le indica a quien se asocia
 		</td>
 	</tr>
 	<tr>
@@ -57,18 +59,22 @@ La siguiente tabla resume los 4 significados habituales con los que trabajar:
                 uso de variable
 		</td>
 		<td>
-                <span class="border border-secondary">accede a...</span>
+                <u><b>accede a...</b></u><p></p>
+		Ejemplo:<br>
 <pre>
- *p_int = 3 ; // accede a p_int y guarda allí un tres
+ int p_int = &b ;
+ <b>*</b>p_int = 3 ; // (*)
 </pre>
-
+(*) accede a p_int y guarda allí un tres
 		</td>
 		<td>
-                <span class="border border-secondary">dirección de...</span>
+                <u><b>dirección de...</b></u><p></p>
+		Ejemplo:<br>
 <pre>
  int b = 3 ;
- int *p_int = &b ; // &b es la dirección de b
+ int *p_int = <b>&b</b> ; // (*)
 </pre>
+(*) &b es la dirección de la variable b
 		</td>
 	</tr>
 	</tbody>
@@ -76,9 +82,11 @@ La siguiente tabla resume los 4 significados habituales con los que trabajar:
 </div>
 </html>
 
+La referencia se utiliza en C++ para paso de parámetro por referencia, evitando el mecanismo usado en C: usar un puntero.
 
 
-La referencia se utiliza en C++ para paso de parámetro por referencia, evitando el mecanismo usado en C: usar un puntero:
+### Paso de parámetros por referencia en C (con punteros) y en C++ (con referencias)
+
 <html>
 <div class="table-responsive">
 <table class="table table-bordered table-hover">
@@ -136,7 +144,7 @@ C++ con referencias
 ## Lecturas recomendadas
 
  * The Little Things: The Missing Performance in std::vector:
-   https://codingnest.com/the-little-things-the-missing-performance-in-std-vector/
-   Agraceder este enlace a Javier López Gómez
+   * https://codingnest.com/the-little-things-the-missing-performance-in-std-vector/
+   * Agraceder este enlace a Javier López Gómez
 
 
