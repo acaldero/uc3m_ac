@@ -31,13 +31,13 @@ Constructor + destructor + constructor copia + operador =
 Constructor + destructor + constructor copia + operador = + constructor movimiento + copia de movimiento
 		</td>
 	</tr>
-	</thead>
-	<tbody>
-	<tr>
-		<td class="col-auto">
+</thead>
+<tbody>
+<tr>
+<td class="col-auto">
 Definición de la clase
-		</td>
-		<td>
+</td>
+<td>
 <pre>
 class ClassString
 {
@@ -85,8 +85,8 @@ class ClassString
     }
 };
 </pre>
-		</td>
-		<td>
+</td>
+<td>
 <pre>
 class ClassString
 {
@@ -173,8 +173,8 @@ class ClassString
     }
 };
 </pre>
-		</td>
-		<td>
+</td>
+<td>
 <pre>
 class ClassString
 {
@@ -288,13 +288,13 @@ class ClassString
 
 };
 </pre>
-		</td>
-	</tr>
-	<tr>
-		<td class="col-auto">
+</td>
+</tr>
+<tr>
+<td class="col-auto">
 Uso de la clase
-		</td>
-		<td>
+</td>
+<td>
 <pre>
 int main ( int argc, char *argv[] )
 {
@@ -306,8 +306,8 @@ int main ( int argc, char *argv[] )
    return 0 ; // destructor 
 }
 </pre>
-		</td>
-		<td>
+</td>
+<td>
 <pre>
 int main ( int argc, char *argv[] )
 {
@@ -324,8 +324,8 @@ int main ( int argc, char *argv[] )
    return 0 ; // destructor 
 }
 </pre>
-		</td>
-		<td>
+</td>
+<td>
 <pre>
 int main ( int argc, char *argv[] )
 {
@@ -350,9 +350,9 @@ int main ( int argc, char *argv[] )
    return 0 ; // destructor 
 }
 </pre>
-		</td>
-	</tr>
-	</tbody>
+</td>
+</tr>
+</tbody>
 </table>
 </div>
 </html>

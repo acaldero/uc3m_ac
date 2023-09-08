@@ -11,14 +11,14 @@
 
 ## Viajando de C a C++
 
-### [(A) Significado de '\*' y '&' según el contexto](de_c_a_cpp.md)
+ * [Significado de '\*' y '&' según el contexto](de_c_a_cpp.md#viajando-de-c-a-c)
 
-### [(B) Paso de parámetros por referencia en C (con punteros) y en C++ (con referencias)](de_c_a_cpp.md)
+ * [Paso de parámetros por referencia en C (con punteros) y en C++ (con referencias)](de_c_a_cpp.md#b-paso-de-par%C3%A1metros-por-referencia-en-c-con-punteros-y-en-c-con-referencias)
 
 
 ## Introducción a C++
 
-### [(A) Definición de una clase en C++](intro_cpp.md)
+ * [Definición de una clase en C++](intro_cpp.md#a-definición-de-una-clase-en-c)
 
 
 ## Lecturas recomendadas
