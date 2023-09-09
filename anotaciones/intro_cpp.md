@@ -33,264 +33,138 @@ Constructor + destructor + constructor copia + operador = + constructor movimien
 	</tr>
 </thead>
 <tbody>
-<tr>
+	<tr>
+		<td class="col-auto">
+Regla aconsejada
+		</td>
+		<td class="col-auto">
+&nbsp;
+		</td>
+		<td class="col-auto">
+<a href="https://en.wikipedia.org/wiki/Rule_of_three_%28C++_programming%29)">Seguir la "regla de tres"</a>
+		</td>
+		<td class="col-auto">
+<a href="https://en.wikipedia.org/w/index.php?title=Rule_of_three_(C%2B%2B_programming)&redirect=yes">Seguir la "regla de cinco"</a>
+		</td>
+	</tr>
+<tr VALIGN="TOP">
 <td class="col-auto">
 Definición de la clase
 </td>
 <td>
 <pre>
+// <a href="https://github.com/acaldero/uc3m_ac/blob/main/anotaciones/classes/class_string_v1.cpp">Código completo en...</a>
 class ClassString
 {
   private:
     int str_len ;
     char *ptr ;
-
   public:
-
     ClassString ( )
     {
        // default constructor
-       cout << "ClassString, *default* constructor" << endl ;
-
-       this->str_len = 0 ;
-       this->ptr     = nullptr ;
+       ...
     }
-
-    ClassString ( const char * initial_value )
+    ClassString ( const char * value )
     {
-       // constructor with 1 string argument 
-       cout << "ClassString, *1 string* constructor" << endl ;
-
-       this->str_len = 0 ;
-       this->ptr     = nullptr ;
-
-       if (initial_value != nullptr)
-       {
-           this->str_len = strlen(initial_value) ;
-           this->ptr     = strdup(initial_value) ;
-       }
+       // constructor with
+       // one string argument 
+       ...
     }
-
     ~ClassString ( )
     {
        // default constructor
-       cout << "ClassString, *destructor*" << endl ;
-       if (this->ptr != nullptr)
-	    cout << "value: " << this->ptr << endl ;
-       else cout << "value: nullptr" << endl ;
-
-       free(this->ptr) ;
-       this->str_len = 0 ;
-       this->ptr = nullptr ;
+       ...
     }
 };
 </pre>
 </td>
 <td>
 <pre>
+// <a href="https://github.com/acaldero/uc3m_ac/blob/main/anotaciones/classes/class_string_v2.cpp">Código completo en...</a>
 class ClassString
 {
   private:
     int str_len ;
     char *ptr ;
-
   public:
-
-    // Follow the "Rule of three":
-    // https://en.wikipedia.org/wiki/Rule_of_three_%28C++_programming%29
-    
     ClassString ( )
     {
        // default constructor
-       cout << "ClassString, *default* constructor" << endl ;
-
-       this->str_len = 0 ;
-       this->ptr     = nullptr ;
+       ...
     }
-
     ClassString ( const char * initial_value )
     {
        // constructor with 1 string argument 
-       cout << "ClassString, *1 string* constructor" << endl ;
-
-       this->str_len = 0 ;
-       this->ptr     = nullptr ;
-
-       if (initial_value != nullptr)
-       {
-           this->str_len = strlen(initial_value) ;
-           this->ptr     = strdup(initial_value) ;
-       }
+       ...
     }
-
     ClassString ( const ClassString & other )
     {
        // copy constructor
-       cout << "ClassString, *copy* constructor" << endl ;
-
-       this->str_len = 0 ;
-       this->ptr = nullptr ;
-
-       if (other.ptr != nullptr)
-       {
-           this->str_len = other.str_len ;
-           this->ptr     = strdup(other.ptr) ;
-       }
+       ...
     }
-
     ClassString & operator= ( const ClassString& other )
     {
        // copy assignment operator
-       cout << "ClassString, *= operator*" << endl ;
-
-       if (this->ptr != nullptr)
-       {
-           free(this->ptr) ;
-           this->str_len = 0 ;
-           this->ptr = nullptr ;
-       }
-
-       if (other.ptr != nullptr)
-       {
-           this->str_len = other.str_len ;
-           this->ptr     = strdup(other.ptr) ;
-       }
-
-       return *this;
+       ...
     }
-
     ~ClassString ( )
     {
        // default constructor
-       cout << "ClassString, *destructor*" << endl ;
-       if (this->ptr != nullptr)
-	    cout << "value: " << this->ptr << endl ;
-       else cout << "value: nullptr" << endl ;
-
-       free(this->ptr) ;
-       this->str_len = 0 ;
-       this->ptr = nullptr ;
+       ...
     }
 };
 </pre>
 </td>
 <td>
 <pre>
+// <a href="https://github.com/acaldero/uc3m_ac/blob/main/anotaciones/classes/class_string_v3.cpp">Código completo en...</a>
 class ClassString
 {
   private:
     int str_len ;
     char *ptr ;
-
   public:
-
-    // Follow the "Rule of five":
-    // https://en.wikipedia.org/wiki/Rule_of_three_%28C++_programming%29
-
     ClassString ( )
     {
        // default constructor
-       cout << "ClassString, *default* constructor" << endl ;
-
-       this->str_len = 0 ;
-       this->ptr     = nullptr ;
+       ...
     }
-
     ClassString ( const char * initial_value )
     {
        // constructor with 1 string argument 
-       cout << "ClassString, *1 string* constructor" << endl ;
-
-       this->str_len = 0 ;
-       this->ptr     = nullptr ;
-
-       if (initial_value != nullptr)
-       {
-           this->str_len = strlen(initial_value) ;
-           this->ptr     = strdup(initial_value) ;
-       }
+       ...
     }
-
     ClassString ( const ClassString & other )
     {
        // copy constructor
-       cout << "ClassString, *copy* constructor" << endl ;
-
-       this->str_len = 0 ;
-       this->ptr = nullptr ;
-
-       if (other.ptr != nullptr)
-       {
-           this->str_len = other.str_len ;
-           this->ptr     = strdup(other.ptr) ;
-       }
+       ...
     }
-
     ClassString & operator= ( const ClassString& other )
     {
        // copy assignment operator
-       cout << "ClassString, *= operator*" << endl ;
-
-       if (this->ptr != nullptr)
-       {
-           free(this->ptr) ;
-           this->str_len = 0 ;
-           this->ptr = nullptr ;
-       }
-
-       if (other.ptr != nullptr)
-       {
-           this->str_len = other.str_len ;
-           this->ptr     = strdup(other.ptr) ;
-       }
-
-       return *this;
+       ...
     }
-
     ~ClassString ( )
     {
        // default constructor
-       cout << "ClassString, *destructor*" << endl ;
-       if (this->ptr != nullptr)
-	    cout << "value: " << this->ptr << endl ;
-       else cout << "value: nullptr" << endl ;
-
-       free(this->ptr) ;
-       this->str_len = 0 ;
-       this->ptr = nullptr ;
+       ...
     }
-
     ClassString ( ClassString && other )
     {
-       // move constructor
-       cout << "ClassString, move *constructor*" << endl ;
-
-       // 'steal' resources
-       this->str_len = other.str_len ;
-       this->ptr     = other.ptr ;
-       other.str_len = 0 ;
-       other.ptr     = nullptr ;
+       // move constructor ('steal' resources)
+       ...
     }
-
     ClassString & operator= ( ClassString&& other )
     {
-       // move assignment operator
-       cout << "ClassString, move *assignment operator*" << endl ;
-
-       // 'steal' resources
-       this->str_len = other.str_len ;
-       this->ptr     = other.ptr ;
-       other.str_len = 0 ;
-       other.ptr     = nullptr ;
-
-       return *this ;
+       // move assignment operator ('steal' resources)
+       ...
     }
-
 };
 </pre>
 </td>
 </tr>
-<tr>
+<tr VALIGN="TOP">
 <td class="col-auto">
 Uso de la clase
 </td>
@@ -298,6 +172,7 @@ Uso de la clase
 <pre>
 int main ( int argc, char *argv[] )
 {
+
    ClassString a("hola mundo") ;
 
    ClassString b = a ;
@@ -311,6 +186,7 @@ int main ( int argc, char *argv[] )
 <pre>
 int main ( int argc, char *argv[] )
 {
+
    ClassString a("hola mundo") ;
 
    // copy constructor
@@ -329,6 +205,7 @@ int main ( int argc, char *argv[] )
 <pre>
 int main ( int argc, char *argv[] )
 {
+
    // 1-string constructor
    ClassString a("hola mundo") ;
 
@@ -356,5 +233,3 @@ int main ( int argc, char *argv[] )
 </table>
 </div>
 </html>
-
-
