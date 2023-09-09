@@ -17,18 +17,24 @@
 <div class="table-responsive">
 <table class="table table-bordered table-hover">
 	<thead>
-	<tr>
+	<tr VALIGN="TOP">
 		<td class="col-auto">
 &nbsp;
 		</td>
 		<td class="col-auto">
-Constructor + destructor
+Constructor y destructor<br>
 		</td>
 		<td class="col-auto">
-Constructor + destructor + constructor copia + operador =
+Constructor y destructor +<br>
+constructor copia +<br>
+operador =
 		</td>
 		<td class="col-auto">
-Constructor + destructor + constructor copia + operador = + constructor movimiento + copia de movimiento
+Constructor y destructor + <br>
+constructor copia + <br>
+operador = + <br>
+constructor movimiento +<br>
+copia de movimiento
 		</td>
 	</tr>
 </thead>
@@ -47,13 +53,14 @@ Regla aconsejada
 <a href="https://en.wikipedia.org/w/index.php?title=Rule_of_three_(C%2B%2B_programming)&redirect=yes">Seguir la "regla de cinco"</a>
 		</td>
 	</tr>
+	
 <tr VALIGN="TOP">
 <td class="col-auto">
 Definición de la clase
 </td>
 <td>
 <pre>
-// <a href="https://github.com/acaldero/uc3m_ac/blob/main/anotaciones/classes/class_string_v1.cpp">Código completo en...</a>
+// <a href="https://github.com/acaldero/uc3m_ac/blob/main/anotaciones/classes/class_string_v1.cpp">Código completo aquí</a>
 class ClassString
 {
   private:
@@ -65,7 +72,9 @@ class ClassString
        // default constructor
        ...
     }
-    ClassString ( const char * value )
+    ClassString ( const 
+	          char * 
+	          value )
     {
        // constructor with
        // one string argument 
@@ -81,7 +90,7 @@ class ClassString
 </td>
 <td>
 <pre>
-// <a href="https://github.com/acaldero/uc3m_ac/blob/main/anotaciones/classes/class_string_v2.cpp">Código completo en...</a>
+// <a href="https://github.com/acaldero/uc3m_ac/blob/main/anotaciones/classes/class_string_v2.cpp">Código completo aquí</a>
 class ClassString
 {
   private:
@@ -93,17 +102,25 @@ class ClassString
        // default constructor
        ...
     }
-    ClassString ( const char * initial_value )
+    ClassString ( const 
+	          char *
+	          value )
     {
-       // constructor with 1 string argument 
+       // constructor with
+       // one string argument 
        ...
     }
-    ClassString ( const ClassString & other )
+    ClassString ( const 
+	          ClassString &
+	          other )
     {
        // copy constructor
        ...
     }
-    ClassString & operator= ( const ClassString& other )
+    ClassString & 
+    operator= ( const 
+	        ClassString& 
+	        other )
     {
        // copy assignment operator
        ...
@@ -118,7 +135,7 @@ class ClassString
 </td>
 <td>
 <pre>
-// <a href="https://github.com/acaldero/uc3m_ac/blob/main/anotaciones/classes/class_string_v3.cpp">Código completo en...</a>
+// <a href="https://github.com/acaldero/uc3m_ac/blob/main/anotaciones/classes/class_string_v3.cpp">Código completo aquí</a>
 class ClassString
 {
   private:
@@ -130,17 +147,25 @@ class ClassString
        // default constructor
        ...
     }
-    ClassString ( const char * initial_value )
+    ClassString ( const 
+	          char * 
+	          value )
     {
-       // constructor with 1 string argument 
+       // constructor with
+       // one string argument 
        ...
     }
-    ClassString ( const ClassString & other )
+    ClassString ( const 
+	          ClassString &
+	          other )
     {
        // copy constructor
        ...
     }
-    ClassString & operator= ( const ClassString& other )
+    ClassString & 
+    operator= ( const
+	        ClassString & 
+	        other )
     {
        // copy assignment operator
        ...
@@ -150,14 +175,19 @@ class ClassString
        // default constructor
        ...
     }
-    ClassString ( ClassString && other )
+    ClassString ( ClassString && 
+	          other )
     {
-       // move constructor ('steal' resources)
+       // move constructor
+       // ('steal' resources)
        ...
     }
-    ClassString & operator= ( ClassString&& other )
+    ClassString & 
+    operator= ( ClassString && 
+	        other )
     {
-       // move assignment operator ('steal' resources)
+       // move assignment operator
+       // ('steal' resources)
        ...
     }
 };
@@ -170,12 +200,27 @@ Uso de la clase
 </td>
 <td>
 <pre>
-int main ( int argc, char *argv[] )
+// <a href="https://github.com/acaldero/uc3m_ac/blob/main/anotaciones/classes/class_string_v1.cpp">Código completo aquí</a>
+int main ( int argc, 
+	   char *argv[] )
 {
 
+   // one-string constructor
    ClassString a("hola mundo") ;
 
+   // copy constructor
    ClassString b = a ;
+
+   // 
+   //
+   //
+
+   //
+   //
+
+   //
+   //
+   //
 
    // return ok
    return 0 ; // destructor 
@@ -184,9 +229,12 @@ int main ( int argc, char *argv[] )
 </td>
 <td>
 <pre>
-int main ( int argc, char *argv[] )
+// <a href="https://github.com/acaldero/uc3m_ac/blob/main/anotaciones/classes/class_string_v2.cpp">Código completo aquí</a>
+int main ( int argc, 
+	   char *argv[] )
 {
 
+   // one-string constructor
    ClassString a("hola mundo") ;
 
    // copy constructor
@@ -196,6 +244,13 @@ int main ( int argc, char *argv[] )
    ClassString c ;
    c = a ;
 
+   //
+   //
+
+   // 
+   //
+   //
+
    // return ok
    return 0 ; // destructor 
 }
@@ -203,10 +258,12 @@ int main ( int argc, char *argv[] )
 </td>
 <td>
 <pre>
-int main ( int argc, char *argv[] )
+// <a href="https://github.com/acaldero/uc3m_ac/blob/main/anotaciones/classes/class_string_v3.cpp">Código completo aquí</a>
+int main ( int argc, 
+	   char *argv[] )
 {
 
-   // 1-string constructor
+   // one-string constructor
    ClassString a("hola mundo") ;
 
    // copy constructor
