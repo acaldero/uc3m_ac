@@ -135,10 +135,10 @@ exit
 ### 1. Pre-requisitos
 
 Ha de disponer el siguiente software:
-1. Distribución Ubuntu (Linux)
-2. Compilador g++ versión 9 o superión
-3. CMake
-4. Entorno CLion
+1. Sistema operativo: Linux (Ubuntu, Debian, etc.)
+2. Compilador: g++ versión 10 o superior
+3. Construcción de proyecto: CMake
+4. Entorno de desarrollo integrado: CLion
 
 #### 1.1. Distribución Linux/Ubuntu
 
@@ -164,9 +164,9 @@ C Si tienes MacOS:
   * Dispone del siguiente projecto para facilitar el uso de un contenedor con Ubuntu:
     * https://github.com/acaldero/u20-docker
 
-#### 1.2. Compilador g++ versión 9 o superior
+#### 1.2. Compilador g++ versión 10 o superior
 
-Para instalar g++ versión 9 o superior dentro de Ubuntu ha de ejecutarse:
+Para instalar g++ versión 10 o superior dentro de Ubuntu ha de ejecutarse:
 ```
 sudo apt-get update
 sudo apt-get upgrade -y
