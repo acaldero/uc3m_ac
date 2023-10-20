@@ -136,8 +136,8 @@ exit
 ```
 
 ### 4 Selección de software específico a usar en el trabajo
-  Es posible que haya disponible distintas implementaciones de un software instaladas, y varias versiones de cada implementación.<br/>
-  Por ejemplo, es posible que haya disponible distintas implementaciones del compilador de C instaladas (gcc, clang, etc.) y varias versiones de cada implementación (gcc 10, gcc 12, etc.).<br/>
+  Es posible que haya disponible distintas implementaciones de un software instaladas, y varias versiones de cada implementación.
+  Por ejemplo, si hay disponible distintos compiladores de C (gcc, clang, etc.) y varias versiones de alguno de ellos (gcc 10, gcc 12, etc.).<br/>
   Para poder seleccionar qué software y qué versión queremos usar para un trabajo particular de entre los disponibles se utiliza el programa **module**.
 
   a. Compruebe primero que software está disponible en avignon.lab.inf.uc3m.es (que es el nodo front-end o nodo de cabecera) o en el nodo interactivo con **module available**:
@@ -167,6 +167,21 @@ Currently Loaded Modulefiles:
   d. Para dejar de usar un software concreto que previamente se había cargado hay que usar la opción **unload**:
 ```
 module unload gcc/12.1.0
+```
+
+  e. El siguiente ejemplo muestra cómo es posible añadir el uso de **module** a los trabajos en la cola:
+```
+#!/bin/sh
+
+# Actualizar variables de entorno definidas en /etc/profile
+.  /etc/profile
+
+# Cargar gcc/12.1.0
+module load gcc/12.1.0
+
+# Compilar con cmake las reglas definidas en CMakeLists.txt
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build
 ```
 
 
