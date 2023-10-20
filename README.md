@@ -18,39 +18,45 @@
    </thead>
    <tbody>
    <tr>
-    <td>12</td><td>Modelos de consistencia</td>
-    <td><ul type="1">
-     <li> <a href="https://acaldero.github.io/uc3m_ac/esquemas/gii-ac-modelos_consistencia-v3.pdf">gii-ac-modelos_consistencia-v3.pdf</a></li>
-    </ul></td>
-   </tr> 
-   <tr>
-    <td>10</td><td>At&oacute;micos y consistencia de memoria con C++</td>
-    <td><ul type="1">
-     <li> <a href="https://acaldero.github.io/uc3m_ac/esquemas/gii-ac-consistencia_en_cpp-v3.pdf">gii-ac-consistencia_en_cpp-v3.pdf</a></li>
-    </ul></td>
-   </tr> 
-   <tr>
-    <td>10</td><td>Sincronizaci&oacute;n</td>
-    <td><ul type="1">
-     <li> <a href="https://acaldero.github.io/uc3m_ac/esquemas/gii-ac-modelos_sincronizacion-v3.pdf">gii-ac-modelos_sincronizacion-v3.pdf</a></li>
-    </ul></td>
-   </tr> 
-   <tr>
-    <td>10</td><td>Fiabilidad</td>
+    <td>02</td><td>Fiabilidad</td>
     <td><ul type="1">
      <li> <a href="https://acaldero.github.io/uc3m_ac/esquemas/gii-ac-fiabilidad-v3.pdf">gii-ac-fiabilidad-v3.pdf</a></li>
     </ul></td>
    </tr> 
    <tr>
-    <td>10</td><td>Fiabilidad (RAID)</td>
+    <td>02</td><td>Fiabilidad (RAID)</td>
     <td><ul type="1">
      <li> <a href="https://acaldero.github.io/uc3m_ac/esquemas/gii-ac-fiabilidad-raid-v3.pdf">gii-ac-fiabilidad-raid-v3.pdf</a></li>
+    </ul></td>
+   </tr> 
+   <tr>
+    <td>08</td><td>OpenMP</td>
+    <td><ul type="1">
+     <li> <a href="https://acaldero.github.io/uc3m_ac/esquemas/gii-ac-omp-v3.pdf">gii-ac-omp-v3.pdf</a></li>
     </ul></td>
    </tr> 
    <tr>
     <td>10</td><td>Coherencia (directorio)</td>
     <td><ul type="1">
      <li> <a href="https://acaldero.github.io/uc3m_ac/esquemas/gii-ac-coherencia-directorio-v2.pdf">gii-ac-coherencia-directorio-v2.pdf</a></li>
+    </ul></td>
+   </tr> 
+   <tr>
+    <td>12</td><td>Modelos de consistencia</td>
+    <td><ul type="1">
+     <li> <a href="https://acaldero.github.io/uc3m_ac/esquemas/gii-ac-modelos_consistencia-v3.pdf">gii-ac-modelos_consistencia-v3.pdf</a></li>
+    </ul></td>
+   </tr> 
+   <tr>
+    <td>13</td><td>At&oacute;micos y consistencia de memoria con C++</td>
+    <td><ul type="1">
+     <li> <a href="https://acaldero.github.io/uc3m_ac/esquemas/gii-ac-consistencia_en_cpp-v3.pdf">gii-ac-consistencia_en_cpp-v3.pdf</a></li>
+    </ul></td>
+   </tr> 
+   <tr>
+    <td>14</td><td>Sincronizaci&oacute;n</td>
+    <td><ul type="1">
+     <li> <a href="https://acaldero.github.io/uc3m_ac/esquemas/gii-ac-modelos_sincronizacion-v3.pdf">gii-ac-modelos_sincronizacion-v3.pdf</a></li>
     </ul></td>
    </tr> 
    <tbody>
@@ -127,6 +133,40 @@ ls -las
   d. Por último ha de finalizar la sesión interactiva:
 ```
 exit
+```
+
+### 4 Selección de software específico a usar en el trabajo
+  Es posible que haya disponible distintas implementaciones de un software instaladas, y varias versiones de cada implementación.<br/>
+  Por ejemplo, es posible que haya disponible distintas implementaciones del compilador de C instaladas (gcc, clang, etc.) y varias versiones de cada implementación (gcc 10, gcc 12, etc.).<br/>
+  Para poder seleccionar qué software y qué versión queremos usar para un trabajo particular de entre los disponibles se utiliza el programa **module**.
+
+  a. Compruebe primero que software está disponible en avignon.lab.inf.uc3m.es (que es el nodo front-end o nodo de cabecera) o en el nodo interactivo con **module available**:
+```
+module avail
+```
+Y la salida podría ser:
+```
+dot  gcc/12.1.0  module-info  modules
+```
+
+  b. De la lista de software disponible, si queremos usar por ejemplo **gcc/12.1.0** hay que usar la opción **load**:
+```
+module load gcc/12.1.0
+```
+
+  c. Para listar el software ya cargado hay que usar la opción **list**:
+```
+module list
+```
+Y la salida podría ser:
+```
+Currently Loaded Modulefiles:
+ 1) gcc/12.1.0
+```
+
+  d. Para dejar de usar un software concreto que previamente se había cargado hay que usar la opción **unload**:
+```
+module unload gcc/12.1.0
 ```
 
 
